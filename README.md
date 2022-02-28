@@ -9,7 +9,9 @@ To use this module navigate to your project's root folder through a terminal and
 1. Run `go mod init`
 2. Run `go get -u github.com/DeAntoLei/go-mqtt`
 3. Run `go mod tidy`
-4. Add `import github.com/DeAntoLei/go-mqtt` to all your source file imports that use the package 
+
+Then open all your source files that use the package and add the following to the imports section
+1. Add `import github.com/DeAntoLei/go-mqtt`
 
 ## Demo
 
