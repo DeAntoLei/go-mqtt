@@ -105,7 +105,7 @@ func (c *MqttConnector) Publish() {
 				} else {
 					msgType = "terminate"
 				}
-				// responseTxt := fmt.Sprintf(`{ "seqNum": "%d", "type": "%s", "timestamp": "%s" }`, msgCount[pkx.TopicName], msgType, time.Now().Format("02/01/2006 15:04:05"))
+
 				response := BrokerMessage{c.AdCount[topic], msgType, time.Now().Format("02/01/2006 15:04:05")}
 				responseTxt, err := json.Marshal(response)
 				if err != nil {

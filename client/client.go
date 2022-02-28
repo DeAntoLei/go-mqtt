@@ -149,9 +149,6 @@ func generateAdvertisement() <-chan []byte {
 				fmt.Printf("> publish(): error while preparing message: %s\n", err)
 				break
 			}
-			// Alternative without json encoding
-			// payload := fmt.Sprintf(`{ "seqNum": "%d", "type": "%s", "deviceId": "%d", "timestamp": "%s" }`,
-			// 	i+1, msgTypes[rand.Intn(types)], rand.Intn(1000), time.Now().Format("02/01/2006 15:04:05"))
 
 			// Sending payload through the channel
 			ch <- payload
